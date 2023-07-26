@@ -15,7 +15,7 @@ import static com.kdt.clone.domain.order.OrderStatus.OPENED;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class OrderPersistenceTest {
 
     @Autowired

@@ -12,7 +12,7 @@ import java.util.Objects;
 @Table(name = "orders")
 @Getter
 @Setter
-public class Order {
+public class Order extends BaseEntity {
     @Id
     @Column(name = "id")
     private String uuid;
@@ -34,7 +34,7 @@ public class Order {
     private List<OrderItem> orderItems;
 
     public void setMember(Member member) {
-        if(Objects.nonNull(this.member)) {
+        if (Objects.nonNull(this.member)) {
             this.member.getOrders().remove(this);
         }
 
